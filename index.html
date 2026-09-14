@@ -39,7 +39,7 @@
       <div class="wrap hero-grid">
         <div>
           <h1>Find the switch port behind a Windows network connection.</h1>
-          <p class="lead">JKELTS LINK DISCOVERY helps technicians listen for LLDP and CDP advertisements so they can identify the connected switch, port ID, port description, platform, and VLAN details.</p>
+          <p class="lead">JKELTS LINK DISCOVERY helps technicians listen for LLDP and CDP advertisements so they can identify the connected switch, port ID, port description, platform, VLAN, and management IP details.</p>
         </div>
         <div class="terminal">
           <div class="cyan">JKELTS LINK DISCOVERY</div><br>
@@ -56,7 +56,7 @@
         <h2>Run Command</h2>
         <div class="commands">
           <div class="box"><h3>PowerShell</h3><div class="command">irm https://jkasalavia.github.io/jlink/r|iex</div></div>
-          <div class="box"><h3>Requirement</h3><p>Install Wireshark with TShark and Npcap for actual packet capture.</p></div>
+          <div class="box"><h3>Capture Engine</h3><p>Uses PSDiscoveryProtocol first. If that does not return data, it can fall back to TShark/Wireshark when installed.</p></div>
         </div>
       </div>
     </section>
@@ -70,7 +70,7 @@
         </div>
       </div>
     </section>
-    <section><div class="wrap"><div class="note">Browsers cannot capture LLDP/CDP packets. This tool must run locally on Windows with Administrator rights and a packet capture driver such as Npcap.</div></div></section>
+    <section><div class="wrap"><div class="note">Browsers cannot capture LLDP/CDP packets. This tool must run locally on Windows with Administrator rights. The script can install/import PSDiscoveryProtocol and uses TShark only as a fallback.</div></div></section>
   </main>
   <footer><div class="wrap">JKELTS LINK DISCOVERY is a Windows IT support helper hosted on GitHub Pages.</div></footer>
 </body>

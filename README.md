@@ -17,6 +17,7 @@ irm https://jkasalavia.github.io/jlink/r|iex
 Notes:
 
 - Requires Administrator rights.
-- For actual LLDP/CDP packet decoding, install Wireshark/TShark with Npcap.
+- Uses PSDiscoveryProtocol first.
+- Can install PSDiscoveryProtocol from PowerShell Gallery when missing.
+- TShark/Wireshark is used only as fallback when available.
 - Browser apps cannot capture LLDP/CDP Layer 2 packets directly.
-
