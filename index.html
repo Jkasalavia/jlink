@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JKELTS LINK DISCOVERY</title>
+  <style>
+    :root{--bg:#eef3f8;--ink:#172033;--muted:#647084;--panel:#fff;--line:#d9e2ee;--brand:#0f766e;--shadow:0 18px 48px rgba(24,34,52,.10)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+    a{color:inherit}
+    .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+    header{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:5}
+    nav{height:64px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:800;letter-spacing:.08em}
+    .hero{padding:56px 0 34px;background:#fff;border-bottom:1px solid var(--line)}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:28px;align-items:center}
+    h1{font-size:46px;line-height:1.06;margin:0 0 14px}
+    .lead{font-size:18px;color:var(--muted);margin:0;max-width:700px}
+    .terminal{background:#0f172a;color:#dbeafe;border:1px solid #26344f;border-radius:8px;box-shadow:var(--shadow);padding:18px;font-family:Consolas,Menlo,monospace;font-size:14px}
+    .cyan{color:#67e8f9}.ok{color:#86efac}.warn{color:#fde68a}
+    section{padding:34px 0}
+    h2{font-size:26px;margin:0 0 14px}
+    .commands{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .box{background:#fff;border:1px solid var(--line);border-radius:8px;padding:18px;box-shadow:0 8px 28px rgba(24,34,52,.06)}
+    .command{background:#0f172a;color:#dbeafe;border-radius:8px;padding:16px;font-family:Consolas,Menlo,monospace;word-break:break-word}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:18px}
+    .card h3{margin:0 0 8px;font-size:17px}.card p{margin:0;color:var(--muted)}
+    .note{border-left:4px solid #b45309;background:#fff7ed;padding:14px 16px;border-radius:8px;color:#5f3b08}
+    footer{padding:32px 0;color:var(--muted);font-size:14px}
+    @media(max-width:860px){.hero-grid,.commands,.grid{grid-template-columns:1fr}h1{font-size:34px}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><nav><div class="brand">JKELTS LINK DISCOVERY</div><a href="https://github.com/Jkasalavia/jlink">GitHub</a></nav></div></header>
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <h1>Find the switch port behind a Windows network connection.</h1>
+          <p class="lead">JKELTS LINK DISCOVERY helps technicians listen for LLDP and CDP advertisements so they can identify the connected switch, port ID, port description, platform, and VLAN details.</p>
+        </div>
+        <div class="terminal">
+          <div class="cyan">JKELTS LINK DISCOVERY</div><br>
+          <div>Protocol        : LLDP</div>
+          <div>Switch / Device : SW-FLOOR2-01</div>
+          <div>Port ID         : GigabitEthernet1/0/24</div>
+          <div>Native VLAN     : 20</div>
+          <div class="ok">Status          : Link data received</div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="wrap">
+        <h2>Run Command</h2>
+        <div class="commands">
+          <div class="box"><h3>PowerShell</h3><div class="command">irm https://jkasalavia.github.io/jlink/r|iex</div></div>
+          <div class="box"><h3>Requirement</h3><p>Install Wireshark with TShark and Npcap for actual packet capture.</p></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="wrap">
+        <h2>What It Helps With</h2>
+        <div class="grid">
+          <div class="card"><h3>Switch port lookup</h3><p>Identify where a Windows endpoint is physically connected.</p></div>
+          <div class="card"><h3>VLAN troubleshooting</h3><p>Confirm advertised port or VLAN details where available.</p></div>
+          <div class="card"><h3>Ticket documentation</h3><p>Save discovered link data into a technician note.</p></div>
+        </div>
+      </div>
+    </section>
+    <section><div class="wrap"><div class="note">Browsers cannot capture LLDP/CDP packets. This tool must run locally on Windows with Administrator rights and a packet capture driver such as Npcap.</div></div></section>
+  </main>
+  <footer><div class="wrap">JKELTS LINK DISCOVERY is a Windows IT support helper hosted on GitHub Pages.</div></footer>
+</body>
+</html>
